@@ -4,10 +4,7 @@ import projects from "@/app/components/BahanProject.jsx";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import React from "react";
-<<<<<<< HEAD
 import WhatsAppButton from "../components/WhatsAppButton";
-=======
->>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
 
 export default function Project() {
   return (
@@ -62,10 +59,7 @@ export default function Project() {
           </div>
         ))}
       </motion.div>
-<<<<<<< HEAD
       <WhatsAppButton />
-=======
->>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
     </section>
   );
 }

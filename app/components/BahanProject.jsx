@@ -25,7 +25,7 @@ const projects = [
    {
     name: "To Do List Website",
     desription:
-      "The To Do List Website is a project I worked on as part of a school club assignment. It was designed with a simple and clean layout, similar to the TicTacToe Website, with the goal of making it easy and efficient for users to access and use. The project was completed in 3 days, using React as the framework and Tailwind CSS for styling.",
+      "A productivity tool featuring a clean, minimalist interface. Developed in 3 days using React and Tailwind CSS, focusing on user efficiency and seamless task management.",
     link: "https://imam-club-12.netlify.app/",
     image: "/todolist.png",
   },
