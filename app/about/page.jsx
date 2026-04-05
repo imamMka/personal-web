@@ -2,7 +2,10 @@
 
 import { motion } from "framer-motion";
 import { NeumorphismButton3 } from "@/app/components/button.jsx";
+<<<<<<< HEAD
 import WhatsAppButton from "../components/WhatsAppButton";
+=======
+>>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
 
 export default function About() {
   return (
@@ -151,7 +154,10 @@ export default function About() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       <WhatsAppButton />
+=======
+>>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
     </main>
   );
 }

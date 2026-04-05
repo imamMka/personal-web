@@ -8,7 +8,10 @@ import {
   NeumorphismButton,
   NeumorphismButton2,
 } from "@/app/components/button.jsx";
+<<<<<<< HEAD
 import WhatsAppButton from "@/app/components/WhatsAppButton.jsx";
+=======
+>>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
 
 export default function Home() {
   return (
@@ -249,7 +252,10 @@ export default function Home() {
           </Marquee>
         </div>
       </section>
+<<<<<<< HEAD
       <WhatsAppButton />
+=======
+>>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
     </main>
   );
 }

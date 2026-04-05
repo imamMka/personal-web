@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { NeumorphismButton3 } from "@/app/components/button.jsx";
+<<<<<<< HEAD
 import { toast } from "react-toastify";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
@@ -38,6 +39,18 @@ export default function Contact() {
         },
       );
   };
+=======
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+const handleClick = () => {
+    toast.success('Notification success!');
+    toast.error('Something went wrong!');
+    toast.info('Here is some info');
+  };
+export default function Contact() {
+>>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
   return (
     <section className="bg-[#ffffff] h-fit pt-30 pb-[90px]">
       <div className="flex flex-col lg:flex-row justify-evenly items-start px-5 lg:px-[140px] gap-10">
@@ -80,6 +93,7 @@ export default function Contact() {
           </motion.p>
         </div>
 
+<<<<<<< HEAD
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -89,6 +103,11 @@ export default function Contact() {
           <label htmlFor="">Name</label>
           <input
             name="name"
+=======
+        <form action="" className="flex flex-col w-full">
+          <label htmlFor="">Name</label>
+          <input
+>>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
             type="text"
             required
             placeholder="Your Name"
@@ -96,12 +115,16 @@ export default function Contact() {
           />
           <label htmlFor="">Email</label>
           <input
+<<<<<<< HEAD
             name="email"
+=======
+>>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
             type="email"
             required
             placeholder="Your Email"
             className="w-full mb-1 rounded-md border-[#213448] border-1 px-3 py-2 text-[#213448] focus:outline-none focus:ring-2 focus:ring-[#213448]"
           />
+<<<<<<< HEAD
           <label htmlFor="">WhatsApp number</label>
           <input
             name="number"
@@ -113,6 +136,11 @@ export default function Contact() {
           <label htmlFor="">Messages</label>
           <textarea
             name="message"
+=======
+          <label htmlFor="">Messages</label>
+          <textarea
+            name="text"
+>>>>>>> 3ce8412d288051ea8ac9240c8eb7748cfb23ba96
             id=""
             required
             placeholder="Insert your messages"
