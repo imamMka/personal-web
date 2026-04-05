@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAF3E0;
+  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #213448;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+h1, 
+h2 {
+  font-family: var(--font-poppins);
+}
+
+h3 {
+  font-family: var(--font-poppins);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
