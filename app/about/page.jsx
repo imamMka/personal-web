@@ -6,7 +6,7 @@ import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function About() {
   return (
-    <main className="bg-[#ffffff] h-full pb-[90px]">
+    <main className="bg-[#ffffff] h-full pt-[90px]">
       <section>
         <div className=" flex flex-col lg:flex-row m-auto items-center pt-[80px] lg:pt-10 lg:w-[1179px]">
           <div className="flex flex-1 flex-col gap-[20px] order-2 lg:order-none drop-shadow-amber-500 pb-[40px]">
@@ -48,13 +48,13 @@ export default function About() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-none flex-1">
+          {/* <div className="order-1 lg:order-none flex-1">
             <img
               src="/hero-img.svg"
               alt="Hero Image"
               className="lg:w-[650px] lg:h-[650px] md:w-[400px] md:h-[400px] w-[300px] h-[300px] order-2"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col lg:flex-row justify-between items-center lg:px-[100px] px-[20px] mt-10">

@@ -26,12 +26,11 @@ export default function Home() {
               whileInView={{ opacity: 1, translateY: 0 }}
               className="flex flex-col gap-[20px] mb-[30px] max-w-[500px]"
             >
-              <h1 className="lg:text-[62px] md:text-[48px] text-[32px] lg:text-start text-center font-[700] leading-none">
-                Hello I’m <br /> Imam Muttaqin
+              <h1 className="lg:text-[62px] md:text-[48px] text-[32px] lg:text-start text-center font-[700] leading-tight">
+                I Build Digital <br /> Products That Convert
               </h1>
-              <p className=" lg:text-[15px] lg:text-start text-center text-[15px] w-full min-w-[268px] leading-7">
-                A UI/UX Designer & Front-End Developer focused on building
-                seamless experiences that not only look good, but feel right.
+              <p className=" lg:text-[18px] lg:text-start text-center text-[15px] w-full min-w-[268px] leading-7 text-gray-700">
+                Custom web applications & compelling UI/UX design for tech companies and startups that want to stand out and convert visitors into customers.
               </p>
             </motion.div>
 
@@ -54,13 +53,26 @@ export default function Home() {
               }}
               transition={{ duration: 0.5, delay: 0.7 }}
               whileInView={{ opacity: 1, translateY: 0 }}
-              className="flex lg:flex-row flex-col justify-center items-center gap-4 lg:gap-6"
+              className="flex flex-col justify-center items-center gap-3 lg:items-start lg:justify-start mb-6"
+            >
+              <p className="text-[#213448] font-[500] text-[14px]">✓ 20+ Projects Delivered | ✓ 5+ Years Experience</p>
+            </motion.div>
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                translateY: 50,
+                transition: { duration: 0.5 },
+              }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              className="flex lg:flex-row flex-col justify-center items-center gap-4 lg:gap-6 lg:justify-start"
             >
               <a href="/contact" className="flex-1 w-full">
-                <NeumorphismButton>Work With Me</NeumorphismButton>
+                <NeumorphismButton>Get Started Today</NeumorphismButton>
               </a>
               <a href="/project" className="flex-1 w-full">
-                <NeumorphismButton2>See My Project</NeumorphismButton2>
+                <NeumorphismButton2>View Case Studies</NeumorphismButton2>
               </a>
             </motion.div>
           </div>
@@ -88,10 +100,10 @@ export default function Home() {
             <div className="w-[8px] h-[30px] bg-[#FFA520] rounded-full"></div>
             <div className="fle flex-col justify-center items-start">
               <p className="text-[#213448] text-[15px] md:text-[18px] font-[500]">
-                Let’s up your business
+                What I Provide
               </p>
               <h1 className="text-[#213448] text-[24px] md:text-[32px] font-[700]">
-                Services
+                Services & Expertise
               </h1>
             </div>
           </motion.div>
@@ -109,14 +121,10 @@ export default function Home() {
             >
               <img src="/uiux.svg" alt="" />
               <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
-                UI&UX Designer
+                UI/UX Design
               </h1>
               <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
-                I craft intuitive and user-centered interfaces that blend
-                functionality with clean, modern aesthetics. My design process
-                focuses on solving real user problems through research,
-                wireframing, prototyping, and testing — turning ideas into
-                seamless digital experiences.
+                I craft intuitive, user-centered interfaces that increase engagement and conversions. From research & wireframes to interactive prototypes—every design decision is backed by user insights.
               </p>
             </motion.div>
 
@@ -132,14 +140,10 @@ export default function Home() {
             >
               <img src="/frontend.svg" alt="" />
               <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
-                Frontend Developer
+                Frontend Development
               </h1>
               <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
-                I’m a Frontend Developer focused on building clean, responsive,
-                and accessible user interfaces using HTML, CSS, Tailwind CSS,
-                JavaScript, React, and Next.js. I love turning design concepts
-                into interactive web experiences with smooth performance and
-                polished visuals.
+                I build fast, accessible, and responsive web applications with React, Next.js, and modern JavaScript. Every line of code is optimized for performance and scalability.
               </p>
             </motion.div>
           </div>
