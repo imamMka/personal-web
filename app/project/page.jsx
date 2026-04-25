@@ -18,7 +18,7 @@ export default function Project() {
           whileInView={{ opacity: 1, translateX: 0 }} className="flex flex-row items-center justify-center lg:items-start lg:justify-start gap-2 mb-10">
         <div className="w-[8px] h-[30px] bg-[#FFA520] rounded-full"></div>
         <h1 className="text-[#213448] text-[24px] md:text-[32px] font-[700]">
-          My Project
+          Featured Case Studies
         </h1>
       </motion.div>
 

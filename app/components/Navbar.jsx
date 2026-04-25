@@ -81,11 +81,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const pathname = usePathname();
-  const [currentPath, setCurrentPath] = useState("");
 
-  useEffect(() => {
-    setCurrentPath(pathname);
-  });
+  const closeMenu = () => setIsOpen(false);
 
   return (
     <nav className="bg-[#ffffff] px-10 py-2 fixed z-3 h-fit w-full ">
@@ -98,9 +95,9 @@ export default function Navbar() {
           <img src="/logo-nav.svg" alt="" className="flex lg:hidden w-14" />
         </div>
 
-        <div>
+        <div className="flex flex-row items-center gap-5">
           <ul
-            className={`flex gap-10 text-[#213448] font-[500]  text-[16px] top-0 right-0 bg-white/30 backdrop-blur-2xl h-fit p-5 transition-all duration-300 ease-in-out max-[48rem]:hidden`}
+            className={`flex gap-10 text-[#213448] font-[500] text-[16px] bg-white/30 backdrop-blur-2xl h-fit transition-all duration-300 ease-in-out max-[48rem]:hidden`}
           >
             <li
               className={pathname === "/" ? "border-b-3 border-[#213448]" : ""}
@@ -122,19 +119,16 @@ export default function Navbar() {
               <Link href="/project">Project</Link>
             </li>
           </ul>
-        </div>
 
-        <div className="hidden md:flex flex-row gap-5 ">
           <a
             href="/contact"
-            className="cursor-pointer bg-[#FFA520] text-white font-[500] px-5 py-2 rounded-[8px] shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:scale-105
-        transition-all duration-300 ease-in-out"
+            className="hidden md:block cursor-pointer bg-[#FFA520] text-white font-[500] px-5 py-2 rounded-[8px] shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:scale-105 transition-all duration-300 ease-in-out"
           >
             Contact
           </a>
-        </div>
 
-        <AnimatedHamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
+          <AnimatedHamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
         <ul
           className={`gap-10 justify-start pt-30 text-[#213448] font-[500] text-[16px] top-0 right-0 bg-white/20 backdrop-blur-2xl h-fit p-5 transition-all duration-300 ease-in-out max-[48rem]:flex hidden fixed flex-col min-h-screen w-[300px]`}
           style={{
@@ -142,29 +136,30 @@ export default function Navbar() {
           }}
         >
           <li className={pathname === "/" ? "border-r-3 border-[#213448]" : ""}>
-            <Link href="/">Home</Link>
+            <Link href="/" onClick={closeMenu}>Home</Link>
           </li>
           <li
             className={
               pathname === "/about" ? "border-r-3 border-[#213448]" : ""
             }
           >
-            <Link href="/about">About</Link>
+            <Link href="/about" onClick={closeMenu}>About</Link>
           </li>
           <li
             className={
               pathname === "/project" ? "border-r-3 border-[#213448]" : ""
             }
           >
-            <Link href="/project">Project</Link>
+            <Link href="/project" onClick={closeMenu}>Project</Link>
           </li>
 
-          <button
-            className="bg-[#FFA520] px-5 py-2 text-[#ffffff] cursor-pointer rounded-[8px] shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:scale-105
-        transition-all duration-300 ease-in-out"
+          <Link
+            href="/contact"
+            onClick={closeMenu}
+            className="bg-[#FFA520] px-5 py-2 text-[#ffffff] cursor-pointer rounded-[8px] shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:scale-105 transition-all duration-300 ease-in-out text-center"
           >
-            <a href="/contact">Contact</a>
-          </button>
+            Contact
+          </Link>
         </ul>
       </section>
     </nav>

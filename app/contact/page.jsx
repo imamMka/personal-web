@@ -58,25 +58,20 @@ export default function Contact() {
                 Contact
               </p>
               <h1 className="text-[#213448] text-[32px] font-[700] z-[1] text-center lg:text-start">
-                Let's up your business
+                Let’s Build Something Exceptional
               </h1>
             </div>
           </motion.div>
 
           <motion.p
-            initial={{
-              opacity: 0,
-              translateX: -50,
-              transition: { duration: 0.5 },
-            }}
+            initial={{ opacity: 0, translateX: -50 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             whileInView={{ opacity: 1, translateX: 0 }}
-            className="text-[#213448] text-[16px] font-[400] text-center lg:text-start lg:w-[500px]"
+            className="text-[#213448] text-[16px] font-[400] text-center lg:text-start lg:w-[500px] leading-relaxed"
           >
-            Describe your challenges and needs. Within 24 hours I will contact
-            you to book a call and plan the entire strategy together on how to
-            start improving your app or website. <br />
-            Let's connect!
+            Have a vision for a complex web application or a brand-new digital product? I specialize in bridging the gap between ambitious ideas and high-performing, scalable reality. Describe your needs, and let’s strategize the perfect roadmap for your project.
+            <br /><br />
+            <strong>Let's connect and scale together.</strong>
           </motion.p>
         </div>
 

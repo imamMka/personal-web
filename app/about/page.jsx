@@ -3,26 +3,23 @@
 import { motion } from "framer-motion";
 import { NeumorphismButton3 } from "@/app/components/button.jsx";
 import WhatsAppButton from "../components/WhatsAppButton";
+import Image from "next/image";
 
 export default function About() {
   return (
-    <main className="bg-[#ffffff] h-full pt-[90px]">
-      <section>
-        <div className=" flex flex-col lg:flex-row m-auto items-center pt-[80px] lg:pt-10 lg:w-[1179px]">
+    <main className="bg-[#ffffff] h-fit pb-[90px]">
+      <section className="flex flex-col justify-center items-center pt-[120px] lg:pt-[160px] px-4">
+        <div className=" flex flex-col lg:flex-row justify-between items-center lg:w-[1179px]">
           <div className="flex flex-1 flex-col gap-[20px] order-2 lg:order-none drop-shadow-amber-500 pb-[40px]">
             <div className="flex flex-col gap-[20px] mb-[30px] max-w-[500px]">
-              <motion.h1
-                initial={{
-                  opacity: 0,
-                  translateY: 50,
-                  transition: { duration: 0.5 },
-                }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                whileInView={{ opacity: 1, translateY: 0 }}
-                className="lg:text-[64px] md:text-[48px] text-[32px] lg:text-start text-center font-[700] leading-4"
-              >
-                About Me
-              </motion.h1>
+                <motion.h1
+                  initial={{ opacity: 0, translateY: 50 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  whileInView={{ opacity: 1, translateY: 0 }}
+                  className="lg:text-[64px] md:text-[48px] text-[32px] lg:text-start text-center font-[700] leading-tight"
+                >
+                  Architecting <br /> Digital Excellence
+                </motion.h1>
               <motion.div
                 initial={{
                   opacity: 0,
@@ -33,28 +30,27 @@ export default function About() {
                 whileInView={{ opacity: 1, translateY: 0 }}
                 className="h-[2px] w-100% bg-[#213448]"
               ></motion.div>
-              <motion.p
-                initial={{
-                  opacity: 0,
-                  translateY: 50,
-                  transition: { duration: 0.5 },
-                }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                whileInView={{ opacity: 1, translateY: 0 }}
-                className=" lg:text-[15px] lg:text-start text-center text-[15px] w-full leading-none"
-              >
-                Let's know each others
-              </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, translateY: 50 }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                  whileInView={{ opacity: 1, translateY: 0 }}
+                  className=" lg:text-[18px] lg:text-start text-center text-[15px] w-full text-gray-600"
+                >
+                  Bridging the gap between creative design and robust technical architecture.
+                </motion.p>
             </div>
           </div>
 
-          {/* <div className="order-1 lg:order-none flex-1">
-            <img
-              src="/hero-img.svg"
-              alt="Hero Image"
-              className="lg:w-[650px] lg:h-[650px] md:w-[400px] md:h-[400px] w-[300px] h-[300px] order-2"
+          <div className="order-1 lg:order-none flex-1">
+            <Image
+              src="/hero.png"
+              alt="Imam Muttaqin"
+              width={650}
+              height={650}
+              priority
+              className="lg:w-[650px] lg:h-[650px] md:w-[400px] md:h-[400px] w-[300px] h-[300px] order-2 object-contain"
             />
-          </div> */}
+          </div>
         </div>
 
         <div className="flex flex-col lg:flex-row justify-between items-center lg:px-[100px] px-[20px] mt-10">
@@ -81,20 +77,12 @@ export default function About() {
             </motion.div>
 
             <motion.p
-              initial={{
-                opacity: 0,
-                translateX: -50,
-                transition: { duration: 0.5 },
-              }}
+              initial={{ opacity: 0, translateX: -50 }}
               transition={{ duration: 1, delay: 0.3 }}
               whileInView={{ opacity: 1, translateX: 0 }}
-              className="text-[#213448] text-[18px] font-[400] text-center lg:text-start lg:w-[500px] mb-10"
+              className="text-[#213448] text-[18px] font-[400] text-center lg:text-start lg:w-[500px] mb-10 leading-relaxed"
             >
-              Hi, I’m Imam Muttaqin — a passionate UI/UX Designer and Front-End
-              Developer. I love turning ideas into interactive and meaningful
-              digital experiences. My journey started with a curiosity for how
-              things work on the web, which grew into a drive to not only make
-              websites functional, but also intuitive and visually engaging.
+              Hi, I’m Imam Muttaqin — a <strong>Fullstack Developer</strong> and <strong>UI/UX Designer</strong>. I specialize in building end-to-end digital solutions that don't just look stunning, but perform flawlessly under the hood. My expertise spans from crafting pixel-perfect interfaces to architecting scalable backend systems.
             </motion.p>
           </div>
 
