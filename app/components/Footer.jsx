@@ -2,9 +2,11 @@
 import { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { IoIosArrowUp } from "react-icons/io";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 export default function Footer() {
   const [showScroll, setShowScroll] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,15 +56,15 @@ export default function Footer() {
         {/* Support */}
         <div className="flex flex-col md:flex-row items-start justify-between gap-10 mt-10 md:mt-0">
           <div>
-            <h2 className="text-2xl font-[700] mb-4">Support</h2>
+            <h2 className="text-2xl font-[700] mb-4">{t("footer.support")}</h2>
             <a href="/contact" className="text-[16px] hover:underline">
-              Contact
+              {t("footer.contact")}
             </a>
           </div>
 
           {/* Social */}
           <div>
-            <h2 className="text-2xl font-[700] mb-4">Social</h2>
+            <h2 className="text-2xl font-[700] mb-4">{t("footer.social")}</h2>
             {/* <div className="">
           </div>  */}
 
@@ -98,12 +100,10 @@ export default function Footer() {
 
       {/* Bottom section */}
       <div className="border-t border-gray-700 flex flex-col md:flex-row justify-between items-center px-6 py-4 text-sm">
-        <p className="mb-2 md:mb-0">
-          © 2025 Imam Muttaqin. All rights reserved.
-        </p>
+        <p className="mb-2 md:mb-0">{t("footer.copyright")}</p>
         <div className="flex items-center gap-4">
           <a href="#" className="hover:underline">
-            Privacy Policy
+            {t("footer.privacyPolicy")}
           </a>
         </div>
       </div>

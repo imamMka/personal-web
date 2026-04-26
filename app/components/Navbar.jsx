@@ -2,8 +2,9 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-
 import { MotionConfig, motion } from "framer-motion";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 const AnimatedHamburgerButton = ({ isOpen, setIsOpen }) => {
   return (
@@ -79,8 +80,8 @@ const VARIANTS = {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const pathname = usePathname();
+  const { t } = useLanguage();
 
   const closeMenu = () => setIsOpen(false);
 
@@ -102,21 +103,21 @@ export default function Navbar() {
             <li
               className={pathname === "/" ? "border-b-3 border-[#213448]" : ""}
             >
-              <Link href="/">Home</Link>
+              <Link href="/">{t("nav.home")}</Link>
             </li>
             <li
               className={
                 pathname === "/about" ? "border-b-3 border-[#213448]" : ""
               }
             >
-              <Link href="/about">About</Link>
+              <Link href="/about">{t("nav.about")}</Link>
             </li>
             <li
               className={
                 pathname === "/project" ? "border-b-3 border-[#213448]" : ""
               }
             >
-              <Link href="/project">Project</Link>
+              <Link href="/project">{t("nav.project")}</Link>
             </li>
           </ul>
 
@@ -124,8 +125,10 @@ export default function Navbar() {
             href="/contact"
             className="hidden md:block cursor-pointer bg-[#FFA520] text-white font-[500] px-5 py-2 rounded-[8px] shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:scale-105 transition-all duration-300 ease-in-out"
           >
-            Contact
+            {t("nav.contact")}
           </a>
+
+          <LanguageSwitcher />
 
           <AnimatedHamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
@@ -136,21 +139,27 @@ export default function Navbar() {
           }}
         >
           <li className={pathname === "/" ? "border-r-3 border-[#213448]" : ""}>
-            <Link href="/" onClick={closeMenu}>Home</Link>
+            <Link href="/" onClick={closeMenu}>
+              {t("nav.home")}
+            </Link>
           </li>
           <li
             className={
               pathname === "/about" ? "border-r-3 border-[#213448]" : ""
             }
           >
-            <Link href="/about" onClick={closeMenu}>About</Link>
+            <Link href="/about" onClick={closeMenu}>
+              {t("nav.about")}
+            </Link>
           </li>
           <li
             className={
               pathname === "/project" ? "border-r-3 border-[#213448]" : ""
             }
           >
-            <Link href="/project" onClick={closeMenu}>Project</Link>
+            <Link href="/project" onClick={closeMenu}>
+              {t("nav.project")}
+            </Link>
           </li>
 
           <Link
@@ -158,7 +167,7 @@ export default function Navbar() {
             onClick={closeMenu}
             className="bg-[#FFA520] px-5 py-2 text-[#ffffff] cursor-pointer rounded-[8px] shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:scale-105 transition-all duration-300 ease-in-out text-center"
           >
-            Contact
+            {t("nav.contact")}
           </Link>
         </ul>
       </section>

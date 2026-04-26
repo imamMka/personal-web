@@ -10,8 +10,10 @@ import {
 } from "@/app/components/button.jsx";
 import WhatsAppButton from "@/app/components/WhatsAppButton.jsx";
 import Image from "next/image";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
   return (
     <main className="bg-[#ffffff] h-fit pb-[90px]">
       <section className="flex flex-col justify-center items-center pt-[120px] lg:pt-[160px] px-4">
@@ -28,10 +30,10 @@ export default function Home() {
               className="flex flex-col gap-[20px] mb-[30px] max-w-[500px]"
             >
               <h1 className="lg:text-[62px] md:text-[48px] text-[32px] lg:text-start text-center font-[700] leading-tight">
-                I Build Fullstack <br /> Products End-to-End
+                {t("hero.title")}
               </h1>
               <p className=" lg:text-[18px] lg:text-start text-center text-[15px] w-full min-w-[268px] leading-7 text-gray-700">
-                From pixel-perfect UI/UX and responsive frontends to robust backends and database architecture — I deliver complete web solutions that scale.
+                {t("hero.subtitle")}
               </p>
             </motion.div>
 
@@ -70,7 +72,7 @@ export default function Home() {
               className="flex lg:flex-row flex-col justify-center items-center gap-4 lg:gap-6 lg:justify-start"
             >
               <a href="/contact" className="flex-1 w-full">
-                <NeumorphismButton>Get Started Today</NeumorphismButton>
+                <NeumorphismButton>{t("hero.cta")}</NeumorphismButton>
               </a>
               <a href="/project" className="flex-1 w-full">
                 <NeumorphismButton2>View Case Studies</NeumorphismButton2>
@@ -104,10 +106,10 @@ export default function Home() {
             <div className="w-[8px] h-[30px] bg-[#FFA520] rounded-full"></div>
             <div className="fle flex-col justify-center items-start">
               <p className="text-[#213448] text-[15px] md:text-[18px] font-[500]">
-                What I Provide
+                {t("services.title")}
               </p>
               <h1 className="text-[#213448] text-[24px] md:text-[32px] font-[700]">
-                Services & Expertise
+                {t("services.title")}
               </h1>
             </div>
           </motion.div>
@@ -122,7 +124,7 @@ export default function Home() {
             >
               <img src="/uiux.svg" alt="UI/UX Design" />
               <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
-                UI/UX Design
+                {t("services.uiux")}
               </h1>
               <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
                 I craft intuitive, user-centered interfaces that increase engagement and conversions. From research & wireframes to high-fidelity prototypes — every design decision is grounded in user insights.
@@ -138,7 +140,7 @@ export default function Home() {
             >
               <img src="/frontend.svg" alt="Web App Development" />
               <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
-                Web App Development
+                {t("services.webapp")}
               </h1>
               <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
                 I build complete, production-ready web applications using React and Next.js — from responsive UI to server-side rendering, authentication, and deployment. Fast, scalable, and built to last.
@@ -154,7 +156,7 @@ export default function Home() {
             >
               <img src="/frontend.svg" alt="Backend & API" />
               <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
-                Backend & API Development
+                {t("services.backend")}
               </h1>
               <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
                 I design and build robust REST APIs and server-side logic using Node.js and Express. From authentication flows to third-party integrations — your backend will be secure, clean, and well-documented.
@@ -170,7 +172,7 @@ export default function Home() {
             >
               <img src="/uiux.svg" alt="Database Architecture" />
               <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
-                Database Architecture
+                {t("services.database")}
               </h1>
               <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
                 I design and manage efficient, scalable databases using PostgreSQL, MySQL, and Prisma ORM. From schema modeling to query optimization — your data is structured for performance and growth.

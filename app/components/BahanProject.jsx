@@ -17,12 +17,13 @@ const projects = [
 
   {
     name: "Take Control Your Home",
-    desription: "My debut web project: a modern smart-home dashboard concept. Built with HTML and Tailwind CSS, focusing on sleek aesthetics and intuitive desktop navigation.",
+    desription:
+      "My debut web project: a modern smart-home dashboard concept. Built with HTML and Tailwind CSS, focusing on sleek aesthetics and intuitive desktop navigation.",
     link: "https://imammka-frontend-22.netlify.app/",
     image: "/takeurcontrolhome.jpg",
   },
 
-   {
+  {
     name: "To Do List Website",
     desription:
       "A productivity tool featuring a clean, minimalist interface. Developed in 3 days using React and Tailwind CSS, focusing on user efficiency and seamless task management.",
@@ -46,8 +47,13 @@ const projects = [
     image: "/XboxHairStudio.png",
   },
 
-  
+  {
+    name: "Panti Asuhan Website",
+    desription:
+      "New Project: Yayasan Panti KPM Melayu 🤝 I recently built a digital home for this social foundation to help them boost their online presence and transparency. Goal: Modernizing social impact. Tech: Next.js & Vercel. Check it out here: https://yayasanpantikpmelayu-bice.vercel.app/",
+    link: "https://yayasanpantikpmelayu-bice.vercel.app/",
+    image: "/yayasanpanti.png",
+  },
 ];
 
-
-export default projects
+export default projects;
