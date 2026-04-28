@@ -1,6 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://imammka.my.id',
-  generateRobotsTxt: true, // Sekalian buat robots.txt
+  generateRobotsTxt: true,
+  generateIndexSitemap: false, // Sekalian buat robots.txt
   sitemapSize: 7000,
 }
