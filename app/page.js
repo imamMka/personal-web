@@ -72,10 +72,10 @@ export default function Home() {
               className="flex lg:flex-row flex-col justify-center items-center gap-4 lg:gap-6 lg:justify-start"
             >
               <a href="/contact" className="flex-1 w-full">
-                <NeumorphismButton>{t("hero.cta")}</NeumorphismButton>
+                <NeumorphismButton />
               </a>
               <a href="/project" className="flex-1 w-full">
-                <NeumorphismButton2>View Case Studies</NeumorphismButton2>
+                <NeumorphismButton2 />
               </a>
             </motion.div>
           </div>
@@ -193,7 +193,7 @@ export default function Home() {
             className="flex flex-row items-center justify-center lg:items-start lg:justify-start gap-2 mb-10"
           >
             <div className="w-[8px] h-[30px] bg-[#FFA520] rounded-full"></div>
-            <h1 className="text-[#213448] text-[24px] md:text-[32px] font-[700]">
+            <h1 className="text-[#213448] dark:text-white text-[24px] md:text-[32px] font-[700]">
               My Tools
             </h1>
           </motion.div>

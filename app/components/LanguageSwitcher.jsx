@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
       {/* Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="w-full flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors dark:bg-gray-800 dark:hover:bg-gray-700"
         aria-label="Select language"
       >
         <span className="text-lg">{currentLang?.flag}</span>
@@ -27,9 +27,8 @@ export default function LanguageSwitcher() {
           {currentLang?.code.toUpperCase()}
         </span>
         <svg
-          className={`w-4 h-4 text-gray-700 dark:text-gray-300 transition-transform ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`w-4 h-4 text-gray-700 dark:text-gray-300 transition-transform ${isOpen ? "rotate-180" : ""
+            }`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -53,11 +52,10 @@ export default function LanguageSwitcher() {
                 changeLanguage(lang.code);
                 setIsOpen(false);
               }}
-              className={`w-full text-left px-4 py-3 flex items-center gap-2 transition-colors ${
-                language === lang.code
-                  ? "bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
-                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-              }`}
+              className={`w-full text-left px-4 py-3 flex items-center gap-2 transition-colors ${language === lang.code
+                ? "bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                }`}
             >
               <span className="text-lg">{lang.flag}</span>
               <span className="font-medium">{lang.label}</span>

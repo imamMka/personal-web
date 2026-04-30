@@ -10,19 +10,17 @@ export const NeumorphismButton = () => {
       className={`
         px-4 py-2 rounded-[8px]
         flex items-center justify-center gap-2 
-        text-[#ffa520]
+        text-[#FFA520]
+        dark:text-white
         w-full
         cursor-pointer
         group
         ease-in-out
         duration-700
         hover:scale-105
-        shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
+        border-[1px] border-[#FFA520]
         
         transition-all
-
-        hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]
-        hover:text-[#ffa520]
     `}
     >
       <FiSend />
@@ -46,16 +44,14 @@ export const NeumorphismButton2 = () => {
         duration-700
         hover:scale-105
 
-        shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
         
         transition-all
 
-        hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]
         hover:text-[#ffffff]
     `}
     >
       <FaBookmark />
-      <span>See My Project</span>
+      <span>View Case Studies</span>
     </button>
   );
 };
@@ -75,11 +71,9 @@ export const NeumorphismButton3 = () => {
         duration-700
         hover:scale-105
         
-        shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)]
         
         transition-all
 
-        hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]
         hover:text-[#ffffff]
     `}
     >

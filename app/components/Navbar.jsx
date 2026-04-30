@@ -83,7 +83,8 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="bg-background text-foreground px-10 py-2 fixed z-3 h-fit w-full transition-colors duration-300">
+    <nav className="text-foreground px-10 py-2 fixed z-50 h-fit w-full transition-colors duration-300">
+      <div className="absolute inset-0 backdrop-blur-2xl -z-10 pointer-events-none" />
       <section className="flex flex-row justify-between items-center mx-auto relative">
         <div>
           <div className="flex flex-row items-center justify-between gap-2 text-[16px] font-semibold hidden lg:flex">
@@ -95,23 +96,23 @@ export default function Navbar() {
 
         <div className="flex flex-row items-center gap-5">
           <ul
-            className={`flex gap-10 text-foreground font-[500] text-[16px] bg-background/30 backdrop-blur-2xl h-fit transition-all duration-300 ease-in-out max-[48rem]:hidden`}
+            className={`flex gap-10 text-foreground font-[500] text-[16px] bg-background/30 h-fit transition-all duration-300 ease-in-out max-[48rem]:hidden`}
           >
             <li
-              className={pathname === "/" ? "border-b-3 border-[#213448]" : ""}
+              className={pathname === "/" ? "border-b-3 border-[#213448] dark:border-white" : ""}
             >
               <Link href="/">{t("nav.home")}</Link>
             </li>
             <li
               className={
-                pathname === "/about" ? "border-b-3 border-[#213448]" : ""
+                pathname === "/about" ? "border-b-3 border-[#213448] dark:border-white" : ""
               }
             >
               <Link href="/about">{t("nav.about")}</Link>
             </li>
             <li
               className={
-                pathname === "/project" ? "border-b-3 border-[#213448]" : ""
+                pathname === "/project" ? "border-b-3 border-[#213448] dark:border-white" : ""
               }
             >
               <Link href="/project">{t("nav.project")}</Link>
@@ -120,7 +121,7 @@ export default function Navbar() {
 
           <a
             href="/contact"
-            className="hidden md:block cursor-pointer bg-[#FFA520] text-white font-[500] px-5 py-2 rounded-[8px] shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:scale-105 transition-all duration-300 ease-in-out"
+            className="hidden md:block cursor-pointer bg-[#FFA520] text-white font-[500] px-5 py-2 rounded-[8px] hover:scale-105 transition-all duration-300 ease-in-out"
           >
             {t("nav.contact")}
           </a>
@@ -135,7 +136,7 @@ export default function Navbar() {
           </div>
         </div>
         <ul
-          className={`gap-10 justify-start pt-30 text-foreground font-[500] text-[16px] top-0 right-0 bg-background/80 backdrop-blur-2xl h-fit p-5 transition-all duration-300 ease-in-out max-[48rem]:flex hidden fixed flex-col min-h-screen w-[300px]`}
+          className={`gap-10 justify-start pt-30 text-foreground font-[500] text-[16px] top-0 right-0 bg-white/30 dark:bg-black/30 backdrop-blur-2xl h-fit p-5 transition-all duration-300 ease-in-out max-[48rem]:flex hidden fixed flex-col min-h-screen w-[300px]`}
           style={{
             transform: `translateX(${isOpen ? "0%" : "100%"})`,
           }}
@@ -144,7 +145,7 @@ export default function Navbar() {
             initial={{ opacity: 0, x: 20 }}
             animate={isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ delay: 0.1 }}
-            className={pathname === "/" ? "border-r-3 border-[#213448]" : ""}
+            className={pathname === "/" ? "border-r-3 border-[#213448] dark:border-white" : ""}
           >
             <Link href="/" onClick={closeMenu}>
               {t("nav.home")}
@@ -155,7 +156,7 @@ export default function Navbar() {
             animate={isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ delay: 0.2 }}
             className={
-              pathname === "/about" ? "border-r-3 border-[#213448]" : ""
+              pathname === "/about" ? "border-r-3 border-[#213448] dark:border-white" : ""
             }
           >
             <Link href="/about" onClick={closeMenu}>
@@ -167,7 +168,7 @@ export default function Navbar() {
             animate={isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ delay: 0.3 }}
             className={
-              pathname === "/project" ? "border-r-3 border-[#213448]" : ""
+              pathname === "/project" ? "border-r-3 border-[#213448] dark:border-white" : ""
             }
           >
             <Link href="/project" onClick={closeMenu}>
@@ -183,7 +184,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={closeMenu}
-              className="block bg-[#FFA520] px-5 py-2 text-[#ffffff] cursor-pointer rounded-[8px] shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:scale-105 transition-all duration-300 ease-in-out text-center"
+              className="block bg-[#FFA520] px-5 py-2 text-[#ffffff] cursor-pointer rounded-[8px] hover:scale-105 transition-all duration-300 ease-in-out text-center"
             >
               {t("nav.contact")}
             </Link>
@@ -193,7 +194,7 @@ export default function Navbar() {
             initial={{ opacity: 0, x: 20 }}
             animate={isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ delay: 0.5 }}
-            className="mt-2 flex items-center gap-4"
+            className="mt-2 flex items-center justify-between gap-4"
           >
             <LanguageSwitcher />
             <ThemeToggle />

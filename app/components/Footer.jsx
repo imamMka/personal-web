@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="space-y-3 text-sm">
             <div className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-orange-400" />
-              <span className="text-[16px]">South Jakarta</span>
+              <span className="text-[16px]">Karawang, West Java, Indonesia</span>
             </div>
             <div className="flex items-center gap-2">
               <FaPhoneAlt className="text-orange-400" />
@@ -55,10 +55,20 @@ export default function Footer() {
 
         {/* Support */}
         <div className="flex flex-col md:flex-row items-start justify-between gap-10 mt-10 md:mt-0">
-          <div>
-            <h2 className="text-2xl font-[700] mb-4">{t("footer.support")}</h2>
+          <div className="flex flex-col items-start justify-between gap-2">
+            <h2 className="text-2xl font-[700]">{t("footer.support")}</h2>
+
             <a href="/contact" className="text-[16px] hover:underline">
               {t("footer.contact")}
+            </a>
+            <a href="/" className="text-[16px] hover:underline">
+              Home
+            </a>
+            <a href="/about" className="text-[16px] hover:underline">
+              About
+            </a>
+            <a href="/project" className="text-[16px] hover:underline">
+              Project
             </a>
           </div>
 

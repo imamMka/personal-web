@@ -1,43 +1,60 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { NeumorphismButton3 } from "@/app/components/button.jsx";
+import { NeumorphismButton, NeumorphismButton2, NeumorphismButton3 } from "@/app/components/button.jsx";
 import WhatsAppButton from "../components/WhatsAppButton";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
     <main className="bg-background text-foreground h-fit pb-[90px] transition-colors duration-300">
       <section className="flex flex-col justify-center items-center pt-[120px] lg:pt-[160px] px-4">
-        <div className=" flex flex-col lg:flex-row justify-between items-center lg:w-[1179px]">
+        <div className=" flex flex-col lg:flex-row justify-between items-center lg:w-[1200px]">
           <div className="flex flex-1 flex-col gap-[20px] order-2 lg:order-none drop-shadow-amber-500 pb-[40px]">
             <div className="flex flex-col gap-[20px] mb-[30px] max-w-[500px]">
-                <motion.h1
-                  initial={{ opacity: 0, translateY: 50 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  whileInView={{ opacity: 1, translateY: 0 }}
-                  className="lg:text-[64px] md:text-[48px] text-[32px] lg:text-start text-center font-[700] leading-tight"
-                >
-                  Architecting <br /> Digital Excellence
-                </motion.h1>
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                    translateY: 50,
-                    transition: { duration: 0.5 },
-                  }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  whileInView={{ opacity: 1, translateY: 0 }}
-                  className="h-[2px] w-100% bg-primary"
-                ></motion.div>
-                <motion.p
-                  initial={{ opacity: 0, translateY: 50 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
-                  whileInView={{ opacity: 1, translateY: 0 }}
-                  className=" lg:text-[18px] lg:text-start text-center text-[15px] w-full text-gray-600 dark:text-gray-400"
-                >
-                  Bridging the gap between creative design and robust technical architecture.
-                </motion.p>
+              <motion.h1
+                initial={{ opacity: 0, translateY: 50 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                whileInView={{ opacity: 1, translateY: 0 }}
+                className="lg:text-[64px] md:text-[48px] text-[32px] lg:text-start text-center font-[700] leading-tight"
+              >
+                Architecting <br /> Digital Excellence
+              </motion.h1>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  translateY: 50,
+                  transition: { duration: 0.5 },
+                }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                whileInView={{ opacity: 1, translateY: 0 }}
+                className="h-[2px] w-100% bg-primary"
+              ></motion.div>
+              <motion.p
+                initial={{ opacity: 0, translateY: 50 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                whileInView={{ opacity: 1, translateY: 0 }}
+                className=" lg:text-[18px] lg:text-start text-center text-[15px] w-full text-gray-600 dark:text-gray-400"
+              >
+                Bridging the gap between creative design and robust technical architecture.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, translateY: 50 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+                whileInView={{ opacity: 1, translateY: 0 }}
+                className="flex flex-col sm:flex-row gap-4 mt-2 lg:justify-start justify-center items-center w-full"
+              >
+                <div className="flex lg:flex-row flex-col justify-center items-center gap-4 lg:gap-6 lg:justify-start w-full">
+                  <Link href="/project" className="w-full lg:w-fit">
+                    <NeumorphismButton />
+                  </Link>
+                  <Link href="/contact" className="w-full lg:w-fit">
+                    <NeumorphismButton2 />
+                  </Link>
+                </div>
+
+              </motion.div>
             </div>
           </div>
 
@@ -53,7 +70,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:px-[100px] px-[20px] mt-10">
+        <div className="max-w-full flex flex-col lg:flex-row justify-between items-center lg:px-[20px] px-[20px] mt-10 lg:gap-[50px]">
           <div className="flex flex-col items-center lg:items-start">
             <motion.div
               initial={{
@@ -102,7 +119,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:px-[100px] px-[20px] mt-10">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:px-[20px] px-[20px] mt-10 lg:gap-[50px]">
           <motion.img
             initial={{
               opacity: 0,
