@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 export default function sitemap() {
   const baseUrl = 'https://imammka.my.id'; // Replace with your actual domain
 
