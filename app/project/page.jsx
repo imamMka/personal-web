@@ -8,7 +8,7 @@ import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Project() {
   return (
-    <section className="bg-[#ffffff] pt-30 pb-[90px] md:px-20 px-10 ">
+    <section className="bg-background text-foreground transition-colors duration-300 pt-30 pb-[90px] md:px-20 px-10 ">
       <motion.div initial={{
             opacity: 0,
             translateX: -50,
@@ -17,7 +17,7 @@ export default function Project() {
           transition={{ duration: 1, delay: 0.3 }}
           whileInView={{ opacity: 1, translateX: 0 }} className="flex flex-row items-center justify-center lg:items-start lg:justify-start gap-2 mb-10">
         <div className="w-[8px] h-[30px] bg-[#FFA520] rounded-full"></div>
-        <h1 className="text-[#213448] text-[24px] md:text-[32px] font-[700]">
+        <h1 className="text-primary text-[24px] md:text-[32px] font-[700]">
           Featured Case Studies
         </h1>
       </motion.div>
@@ -32,26 +32,26 @@ export default function Project() {
         {projects.map((project, index) => (
           <div 
             key={index}
-            className="w-fit h-fit border-2 border-[#213448] rounded-[8px] p-5 group transition-all duration-1000 ease-in-out hover:scale-105"
+            className="w-fit h-fit border-2 border-primary rounded-[8px] p-5 group transition-all duration-1000 ease-in-out hover:scale-105"
           >
             <a href={project.link}>
               <img
                 src={project.image}
                 alt=""
-                className="lg:h-[400px] h-[200px] object-cover w-full border-1 border-[#213448]"
+                className="lg:h-[400px] h-[200px] object-cover w-full border-1 border-primary"
               />
 
               <div className="py-3">
-                <div className="text-[#213448]">
-                  <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
+                <div className="text-primary">
+                  <h1 className="text-primary text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
                     {project.name}
                   </h1>
-                  <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start">
+                  <p className="text-primary text-[15px] lg:text-[18px] font-[400] text-center lg:text-start">
                     {project.desription}
                   </p>
                 </div>
                 <div className="flex flex-row justify-end items-center gap-2 w-full">
-                  <p className="font-[700] underline text-[#213448] text-[15px] lg:text-[18px]">Live Preview</p>
+                  <p className="font-[700] underline text-primary text-[15px] lg:text-[18px]">Live Preview</p>
                   <FaArrowRight className="w-fit h-[40px] group-hover:-rotate-45 transition-all duration-300 ease-in-out" />
                 </div>
               </div>

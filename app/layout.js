@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Loading from "./components/loading";
 import { LanguageProvider } from "./context/LanguageContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -31,9 +32,11 @@ export default function RootLayout({ children }) {
         className={`${poppins.variable} ${inter.variable} antialiased overflow-x-hidden`}
       >
         <LanguageProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <ThemeProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </ThemeProvider>
         </LanguageProvider>
       </body>
     </html>

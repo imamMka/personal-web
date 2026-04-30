@@ -15,7 +15,7 @@ import { useLanguage } from "@/app/context/LanguageContext";
 export default function Home() {
   const { t } = useLanguage();
   return (
-    <main className="bg-[#ffffff] h-fit pb-[90px]">
+    <main className="bg-background text-foreground h-fit pb-[90px] transition-colors duration-300">
       <section className="flex flex-col justify-center items-center pt-[120px] lg:pt-[160px] px-4">
         <div className=" flex flex-col lg:flex-row justify-between items-center lg:w-[1179px]">
           <div className="flex flex-1 flex-col gap-[20px] order-2 lg:order-none drop-shadow-[#FFA520]">
@@ -32,7 +32,7 @@ export default function Home() {
               <h1 className="lg:text-[62px] md:text-[48px] text-[32px] lg:text-start text-center font-[700] leading-tight">
                 {t("hero.title")}
               </h1>
-              <p className=" lg:text-[18px] lg:text-start text-center text-[15px] w-full min-w-[268px] leading-7 text-gray-700">
+              <p className=" lg:text-[18px] lg:text-start text-center text-[15px] w-full min-w-[268px] leading-7 text-gray-700 dark:text-gray-400">
                 {t("hero.subtitle")}
               </p>
             </motion.div>
@@ -45,7 +45,7 @@ export default function Home() {
               }}
               transition={{ duration: 0.5, delay: 0.5 }}
               whileInView={{ opacity: 1, translateY: 0 }}
-              className="h-[2px] w-100% bg-[#213448]"
+              className="h-[2px] w-100% bg-primary"
             ></motion.div>
 
             <motion.div
@@ -56,9 +56,9 @@ export default function Home() {
               }}
               transition={{ duration: 0.5, delay: 0.7 }}
               whileInView={{ opacity: 1, translateY: 0 }}
-              className="flex flex-col justify-center items-center gap-3 lg:items-start lg:justify-start mb-6"
+              className="flex flex-col justify-center items-center gap-3 lg:items-start lg:justify-start mb-6 text-primary"
             >
-              <p className="text-[#213448] font-[500] text-[14px]">✓ 20+ Projects Delivered | ✓ Fullstack Developer | ✓ Database Architect</p>
+              <p className="font-[500] text-[14px]">✓ 20+ Projects Delivered | ✓ Fullstack Developer | ✓ Database Architect</p>
             </motion.div>
 
             <motion.div
@@ -105,10 +105,10 @@ export default function Home() {
           >
             <div className="w-[8px] h-[30px] bg-[#FFA520] rounded-full"></div>
             <div className="fle flex-col justify-center items-start">
-              <p className="text-[#213448] text-[15px] md:text-[18px] font-[500]">
+              <p className="text-primary text-[15px] md:text-[18px] font-[500]">
                 {t("services.title")}
               </p>
-              <h1 className="text-[#213448] text-[24px] md:text-[32px] font-[700]">
+              <h1 className="text-primary text-[24px] md:text-[32px] font-[700]">
                 {t("services.title")}
               </h1>
             </div>
@@ -123,10 +123,10 @@ export default function Home() {
               className="flex flex-col justify-center items-center lg:items-start"
             >
               <img src="/uiux.svg" alt="UI/UX Design" />
-              <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
+              <h1 className="text-primary text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
                 {t("services.uiux")}
               </h1>
-              <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
+              <p className="text-primary text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
                 I craft intuitive, user-centered interfaces that increase engagement and conversions. From research & wireframes to high-fidelity prototypes — every design decision is grounded in user insights.
               </p>
             </motion.div>
@@ -139,10 +139,10 @@ export default function Home() {
               className="flex flex-col justify-center items-center lg:items-start"
             >
               <img src="/frontend.svg" alt="Web App Development" />
-              <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
+              <h1 className="text-primary text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
                 {t("services.webapp")}
               </h1>
-              <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
+              <p className="text-primary text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
                 I build complete, production-ready web applications using React and Next.js — from responsive UI to server-side rendering, authentication, and deployment. Fast, scalable, and built to last.
               </p>
             </motion.div>
@@ -155,10 +155,10 @@ export default function Home() {
               className="flex flex-col justify-center items-center lg:items-start"
             >
               <img src="/frontend.svg" alt="Backend & API" />
-              <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
+              <h1 className="text-primary text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
                 {t("services.backend")}
               </h1>
-              <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
+              <p className="text-primary text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
                 I design and build robust REST APIs and server-side logic using Node.js and Express. From authentication flows to third-party integrations — your backend will be secure, clean, and well-documented.
               </p>
             </motion.div>
@@ -171,10 +171,10 @@ export default function Home() {
               className="flex flex-col justify-center items-center lg:items-start"
             >
               <img src="/uiux.svg" alt="Database Architecture" />
-              <h1 className="text-[#213448] text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
+              <h1 className="text-primary text-[24px] md:text-[28px] lg:text-[34px] font-[700] text-center lg:text-start">
                 {t("services.database")}
               </h1>
-              <p className="text-[#213448] text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
+              <p className="text-primary text-[15px] lg:text-[18px] font-[400] text-center lg:text-start max-w-[438px]">
                 I design and manage efficient, scalable databases using PostgreSQL, MySQL, and Prisma ORM. From schema modeling to query optimization — your data is structured for performance and growth.
               </p>
             </motion.div>
@@ -205,62 +205,62 @@ export default function Home() {
             <div className="flex flex-row gap-[50px] items-center">
               <div className="flex flex-row gap-2 items-center">
                 <img src="/figma.svg" alt="Figma" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">Figma</p>
+                <p className="text-primary text-2xl font-[500]">Figma</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/html.svg" alt="HTML" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">HTML</p>
+                <p className="text-primary text-2xl font-[500]">HTML</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/css.svg" alt="CSS" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">CSS</p>
+                <p className="text-primary text-2xl font-[500]">CSS</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/js.svg" alt="JavaScript" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">Javascript</p>
+                <p className="text-primary text-2xl font-[500]">Javascript</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/react.svg" alt="React" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">React.js</p>
+                <p className="text-primary text-2xl font-[500]">React.js</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/nextjs.svg" alt="Next.js" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">Next.js</p>
+                <p className="text-primary text-2xl font-[500]">Next.js</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/tailwind.svg" alt="Tailwind CSS" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">Tailwind CSS</p>
+                <p className="text-primary text-2xl font-[500]">Tailwind CSS</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/js.svg" alt="Node.js" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">Node.js</p>
+                <p className="text-primary text-2xl font-[500]">Node.js</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/js.svg" alt="Express.js" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">Express.js</p>
+                <p className="text-primary text-2xl font-[500]">Express.js</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/js.svg" alt="PostgreSQL" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">PostgreSQL</p>
+                <p className="text-primary text-2xl font-[500]">PostgreSQL</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/js.svg" alt="MySQL" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">MySQL</p>
+                <p className="text-primary text-2xl font-[500]">MySQL</p>
               </div>
 
               <div className="flex flex-row gap-2 items-center">
                 <img src="/js.svg" alt="Prisma" width={60} height={60} className="mx-0" />
-                <p className="text-[#231448] text-2xl font-[500]">Prisma ORM</p>
+                <p className="text-primary text-2xl font-[500]">Prisma ORM</p>
               </div>
             </div>
           </Marquee>

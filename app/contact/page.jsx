@@ -39,7 +39,7 @@ export default function Contact() {
       );
   };
   return (
-    <section className="bg-[#ffffff] h-fit pt-30 pb-[90px]">
+    <section className="bg-background text-foreground transition-colors duration-300 h-fit pt-30 pb-[90px]">
       <div className="flex flex-col lg:flex-row justify-evenly items-start px-5 lg:px-[140px] gap-10">
         <div className="flex flex-col gap-5 justify-center items-center lg:items-start">
           <motion.div
@@ -54,10 +54,10 @@ export default function Contact() {
           >
             <div className="w-[8px] h-[30px] bg-[#FFA520] rounded-full"></div>
             <div className="relative w-fit flex flex-col">
-              <p className="text-[#213448] text-[16px] font-[400] z-[1] text-start">
+              <p className="text-primary text-[16px] font-[400] z-[1] text-start">
                 Contact
               </p>
-              <h1 className="text-[#213448] text-[32px] font-[700] z-[1] text-center lg:text-start">
+              <h1 className="text-primary text-[32px] font-[700] z-[1] text-center lg:text-start">
                 Let’s Build Something Exceptional
               </h1>
             </div>
@@ -67,7 +67,7 @@ export default function Contact() {
             initial={{ opacity: 0, translateX: -50 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             whileInView={{ opacity: 1, translateX: 0 }}
-            className="text-[#213448] text-[16px] font-[400] text-center lg:text-start lg:w-[500px] leading-relaxed"
+            className="text-primary text-[16px] font-[400] text-center lg:text-start lg:w-[500px] leading-relaxed"
           >
             Have a vision for a complex web application or a brand-new digital product? I specialize in bridging the gap between ambitious ideas and high-performing, scalable reality. Describe your needs, and let’s strategize the perfect roadmap for your project.
             <br /><br />
@@ -87,7 +87,7 @@ export default function Contact() {
             type="text"
             required
             placeholder="Your Name"
-            className="w-full mb-1 rounded-md border-[#213448] border-1 px-3 py-2 text-[#213448] focus:outline-none focus:ring-2 focus:ring-[#213448]"
+            className="w-full mb-1 rounded-md border-primary border-1 px-3 py-2 text-foreground bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <label htmlFor="">Email</label>
           <input
@@ -95,7 +95,7 @@ export default function Contact() {
             type="email"
             required
             placeholder="Your Email"
-            className="w-full mb-1 rounded-md border-[#213448] border-1 px-3 py-2 text-[#213448] focus:outline-none focus:ring-2 focus:ring-[#213448]"
+            className="w-full mb-1 rounded-md border-primary border-1 px-3 py-2 text-foreground bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <label htmlFor="">WhatsApp number</label>
           <input
@@ -103,7 +103,7 @@ export default function Contact() {
             type="tel"
             required
             placeholder="Your WhatsApp Number"
-            className="w-full mb-1 rounded-md border-[#213448] border-1 px-3 py-2 text-[#213448] focus:outline-none focus:ring-2 focus:ring-[#213448]"
+            className="w-full mb-1 rounded-md border-primary border-1 px-3 py-2 text-foreground bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <label htmlFor="">Messages</label>
           <textarea
@@ -111,7 +111,7 @@ export default function Contact() {
             id=""
             required
             placeholder="Insert your messages"
-            className="w-full mb-5 h-[200px] rounded-md resize-none border-[#213448] border-1 px-3 py-2 text-[#213448] focus:outline-none focus:ring-2 focus:ring-[#213448]"
+            className="w-full mb-5 h-[200px] rounded-md resize-none border-primary border-1 px-3 py-2 text-foreground bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
           <NeumorphismButton3 />
         </form>
