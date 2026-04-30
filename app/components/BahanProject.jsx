@@ -54,6 +54,14 @@ const projects = [
     link: "https://yayasanpantikpmelayu-bice.vercel.app/",
     image: "/yayasanpanti.png",
   },
+
+  {
+    name: "Mak Dian Bakery & Cake Website",
+    desription:
+      "A modern e-commerce platform for a local bakery, featuring a seamless ordering process and an elegant, user-friendly interface.",
+    link: "https://makdianbakery.vercel.app/",
+    image: "/makdianbakery.png",
+  },
 ];
 
 export default projects;
